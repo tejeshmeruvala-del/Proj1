@@ -1,6 +1,19 @@
 <html>
+  <head>
+    <style>
+      h1 {
+        display: block;
+      }
+      h1.hidden {
+        display: none;
+      }
+    </style>
+  </head>
   <body>
-    <h1>
+    <button onclick="showH1()">Show H1</button>
+    <button onclick="hideH1()">Hide H1</button>
+    
+    <h1 id="myH1">
       H-Hyper : Being SuperInteractive (HTML is very interactive as
       it can be executed in any browser, and can get the data from
       anywhere in the Web)
@@ -15,5 +28,15 @@
 
 
     </h1>
+    
+    <script>
+      function showH1() {
+        document.getElementById('myH1').classList.remove('hidden');
+      }
+      
+      function hideH1() {
+        document.getElementById('myH1').classList.add('hidden');
+      }
+    </script>
   </body>
 </html>
